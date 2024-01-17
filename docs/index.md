@@ -5,4 +5,9 @@ Dit is de file die het spel doet opstarten. Deze moet zo eenvoudig mogelijk blij
 ## game_constants.py
 In deze file definiëren we alle constanten, zoals de schermresolutie. Zet constanten altijd met een HOOFDLETTER.
 
+## Ter info
+Dit is een HTML pagina. Je kan hier dus bijvoorbeeld ook <a href="https://nl.wikipedia.org/wiki/Test">links</a> toevoegen, of foto's:
+
+<img src="test.png" alt="test image"></img>
+
 
