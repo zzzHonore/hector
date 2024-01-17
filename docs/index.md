@@ -10,4 +10,6 @@ Dit is een HTML pagina. Je kan hier dus bijvoorbeeld ook <a href="https://nl.wik
 
 <img src="test.png" alt="test image"></img>
 
+test Git commits in VSCODE
+
 
