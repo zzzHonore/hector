@@ -84,10 +84,10 @@ class chess_control_area(GameArea):
 class ChessGame(Game):
     def __init__(self, window, clock):
         Game.__init__(self, window, clock)
-        self.game_area = chess_game_area(self)
-        self.history_area = chess_history_area(self)
-        self.player_area = chess_player_area(self)
-        self.control_area = chess_control_area(self)
+        self.game_area = chess_game_area(self,GAME_RECT)
+        self.history_area = chess_history_area(self,HIST_RECT)
+        self.player_area = chess_player_area(self,PLAYER_RECT)
+        self.control_area = chess_control_area(self,CONTROL_RECT)
         self.chess_board = ChessBoard()
 
     def update_data(self):
