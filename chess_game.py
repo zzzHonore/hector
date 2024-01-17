@@ -1,4 +1,5 @@
 from game_constants import *
+from colors import *
 from evt_obj import EvtObj
 import pygame as pg
 import time as t
@@ -61,26 +62,30 @@ class GameArea(EvtObj):
     def __init__(self, game, r):
         EvtObj.__init__(self)
         self.game, self.rect = game, r
-    def draw(self): pass
+
+    def frame_area(self):
+        pg.draw.rect(self.game.win, BLUE, self.rect,4)
+    def draw(self):
+        self.frame_area()
 class chess_game_area(GameArea):
     def __init__(self, game, r):
         GameArea.__init__(self, game, r)
-    def draw(self): pass
+    def draw(self): GameArea.draw(self)
 
 class chess_history_area(GameArea):
     def __init__(self, game, r):
         GameArea.__init__(self, game, r)
-    def draw(self): pass
+    def draw(self): GameArea.draw(self)
 
 class chess_player_area(GameArea):
     def __init__(self, game, r):
         GameArea.__init__(self, game, r)
-    def draw(self): pass
+    def draw(self): GameArea.draw(self)
 
 class chess_control_area(GameArea):
     def __init__(self, game, r):
         GameArea.__init__(self, game, r)
-    def draw(self): pass
+    def draw(self): GameArea.draw(self)
 class ChessGame(Game):
     def __init__(self, window, clock):
         Game.__init__(self, window, clock)
