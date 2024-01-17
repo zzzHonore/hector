@@ -6,10 +6,6 @@ Dit is de file die het spel doet opstarten. Deze moet zo eenvoudig mogelijk blij
 In deze file definiëren we alle constanten, zoals de schermresolutie. Zet constanten altijd met een HOOFDLETTER.
 
 ## Ter info
-Dit is een HTML pagina. Je kan hier dus bijvoorbeeld ook <a href="https://nl.wikipedia.org/wiki/Test">links</a> toevoegen, of foto's:
+Dit is een HTML pagina. Je kan hier dus bijvoorbeeld ook <a href="https://nl.wikipedia.org/wiki/Link">links</a> toevoegen, of foto's:
 
-<img src="test.png" alt="test image"></img>
-
-test Git commits in VSCODE
-
-
+<img src="test.png" alt="test image">
