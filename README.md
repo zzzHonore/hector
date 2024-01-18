@@ -6,3 +6,4 @@ Project: schaakbot.
 ## developers checking in 
 * Willem Nelissen
 * next developer
+* developer
