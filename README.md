@@ -1,5 +1,5 @@
 # hector
-Codebase voor het seminarie "Programmeren in Python" van de zesdejaars van het Sint-Pïeterscollege in Jette 
+Codebase voor het seminarie "Programmeren in Python" van de zesdejaars van het Sint-Pieterscollege in Jette 
 Project: schaakbot.
 
 
