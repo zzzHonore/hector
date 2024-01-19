@@ -8,14 +8,28 @@ pygame.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
 clock = pygame.time.Clock()
 running = True
 
-# this loop always runs
+to_draw = []
+
+# game loop
 while running:
+    # ... events for player interaction
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
+        elif event.type == pygame.MOUSEBUTTONUP:
+            mouse_position = pygame.mouse.get_pos()
+            to_draw.append(mouse_position)
 
-    render()
-    pygame.display.flip()
-    clock.tick(60) #limiteer FPS tot 60
+    # ... logic
+
+    # clear the screen before rendering
+    window.fill("white")
+    # ... rendering the screen
+    for coords in to_draw:
+        pygame.draw.circle(window,(0,0,255),coords,75)
+
+    pygame.display.flip() # update the screen
+
+    clock.tick(60) # wait until the next frame (60FPS)
 
 pygame.quit()
