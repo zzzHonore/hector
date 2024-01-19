@@ -1,12 +1,21 @@
-from game_constants import *
-from chess_game import ChessGame
-import pygame as pg
-pg.init()
+import pygame
+import chess
 
-#GAME SPECIFIC BLOCK
-pg.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
-win = pg.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-clock = pg.time.Clock()
-theGame = ChessGame(win,clock)
-theGame.execute()
-pg.quit()
+# set up pygame
+pygame.init()
+window = pygame.display.set_mode((1280,720))
+pygame.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
+clock = pygame.time.Clock()
+running = True
+
+# this loop always runs
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    render()
+    pygame.display.flip()
+    clock.tick(60) #limiteer FPS tot 60
+
+pygame.quit()
