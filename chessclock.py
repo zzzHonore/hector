@@ -9,6 +9,5 @@ class ChessClock(object):
     def update(self):
         # voeg tekst toe op de juiste plek
         # verander de tekst naar het juiste aantal seconden
-        
         pass
     
