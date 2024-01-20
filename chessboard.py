@@ -1,7 +1,6 @@
 import pygame
 import chess
 
-   
 class ChessBoard(object):
     def __init__(self,top,left,width):
         self.left=left

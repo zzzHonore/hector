@@ -14,8 +14,7 @@ running = True
 
 # set up our own chessboard
 board = chessboard.ChessBoard(top=100,left=100,width=400)
-
-
+clock = clock.Clock()
 
 # game loop
 while running:
@@ -34,9 +33,21 @@ while running:
     # clear the screen before rendering
     window.fill("white")
 
+    # draw relevant areas
+    chess_area = pygame.Rect(60,60,600,600)
+    pygame.draw.rect(window,"red",chess_area,border_radius=2)
+    clock_area = pygame.Rect(720,60,500,200)
+    pygame.draw.rect(window,"red",clock_area)
+    info_area = pygame.Rect(720,320,500,340)
+    pygame.draw.rect(window,"red",info_area,border_radius=2)
+    # clock_area = pygame.Rect()
+
     # draw chessboard
     board.draw_background(window)
     board.draw_pieces(window,position=chess.STARTING_FEN)
+
+    # draw clock
+
 
     pygame.display.flip() # update the screen
 
