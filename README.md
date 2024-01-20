@@ -15,7 +15,7 @@ Project: schaakbot.
 ## Te verdelen taken
 * Taak 1: Aanmaken basisstructuur chessboard+pieces
 	Robin (reeds gedaan want nodig voor alle volgende taken)
-In willekeurige volgorde:
+### In willekeurige volgorde:
 * Taak 2: Tekenen van schaakbord en stukken
 * Taak 3: Wegschrijven en lezen van schaakbord in FEN formaat
 * Taak 4: Player area tekenen
