@@ -2,16 +2,18 @@ import pygame
 import chess
 
 class ChessBoard(object):
-    def __init__(self,top,left,width):
+    def __init__(self,left,top,width):
         self.left=left
         self.top=top
         self.width=width
+        self.height=width
+        self.rect = (left,top,width,width)
 
     def draw_background(self,window):
         """Draws the background of the chess board"""
         # This shows how to draw a rectangle on the screen
         color="grey"
-        rectangle = pygame.Rect(self.left,self.top,self.width,self.width)
+        rectangle = pygame.Rect(self.left,self.top,self.width,self.heigth)
         pygame.draw.rect(window,color,rectangle)
         # verander deze code zodat je in plaats van 1 rect in 1 kleur, 64 rects in de juiste kleuren tekent
 
