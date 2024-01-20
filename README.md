@@ -13,8 +13,7 @@ Project: schaakbot.
 * Vivianne Michiels: status onbekend
 
 ## Te verdelen taken
-* Taak 1: Aanmaken basisstructuur chessboard+pieces
-	Robin (reeds gedaan want nodig voor alle volgende taken)
+* Taak 1: Aanmaken basisstructuur chessboard+pieces: Robin Berger (reeds gedaan want nodig voor alle volgende taken)
 ### In willekeurige volgorde:
 * Taak 2: Tekenen van schaakbord en stukken
 * Taak 3: Wegschrijven en lezen van schaakbord in FEN formaat
@@ -22,5 +21,5 @@ Project: schaakbot.
 * Taak 5: Beoordeling waarde van het bord
 * Taak 6: History area: Weergeven van historiek
     +bord terugzetten naar vorige toestand (multiple undo)
-* Taak 7: Uittesten background routines; ROBIN
+* Taak 7: Uittesten background routines; Robin Berger
 
