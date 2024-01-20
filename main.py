@@ -2,8 +2,9 @@
 import pygame
 import chess
 # import our own files
-from constants import WINDOW_WIDTH, WINDOW_HEIGHT
+from constants import *
 import chessboard
+import chessclock
 
 # set up pygame
 pygame.init()
@@ -14,7 +15,7 @@ running = True
 
 # set up our own chessboard
 board = chessboard.ChessBoard(top=100,left=100,width=400)
-clock = clock.Clock()
+chessclock = chessclock.ChessClock()
 
 # game loop
 while running:
@@ -34,7 +35,7 @@ while running:
     window.fill("white")
 
     # draw relevant areas
-    chess_area = pygame.Rect(60,60,600,600)
+    chess_area = pygame.Rect(GAME_AREA)
     pygame.draw.rect(window,"red",chess_area,border_radius=2)
     clock_area = pygame.Rect(720,60,500,200)
     pygame.draw.rect(window,"red",clock_area)

@@ -1,4 +1,4 @@
-class Clock(object):
+class ChessClock(object):
 
     def __init__(self):
         pass
