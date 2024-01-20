@@ -26,7 +26,6 @@ while running:
         elif event.type == pygame.MOUSEBUTTONUP:
             mouse_position = pygame.mouse.get_pos()
 
-
     # ... logic comes here
 
 

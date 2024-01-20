@@ -24,6 +24,6 @@ class ChessBoard(object):
         # Hier tonen we hoe je een foto van een schaakstuk op het scherm zet
         piece = pygame.image.load("./assets/K-black.png")
         window.blit(piece,(self.left,self.top))
-        # verandere deze code zodat je in plaats van 1 schaakstuk, alle juiste schaakstukken op het scherm zet
+        # verander deze code zodat je in plaats van 1 schaakstuk, alle juiste schaakstukken op het scherm zet
         # probeer dit eerst met eender welke positie van het bord
         # zorg daarna dat je rekening houdt met de positie die meegegeven is in het argument "position"
