@@ -7,7 +7,7 @@ Project: schaakbot.
 * Willem Nelissen: INSTALLATIE OK
 * Bintou Barrie: status onbekend
 * Robin Berger: PYCHARM + GIT-interface OK
-* Chems Dahhane: status onbekend
+* Chems Dahhane: installatie OK
 * Adam Idan: status onbekend
 * Abdullah Tahir: status onbekend
 * Vivianne Michiels: status onbekend
