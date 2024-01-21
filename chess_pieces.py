@@ -16,9 +16,11 @@ class ChessPiece:
         self.BW = black_or_white
 
     def draw(self,win,square_width,x,y):
-        pg.draw.rect(win, RED, (x, y, square_width, square_width), 0, 4)
-        # pg.draw.rect(win, RED, (420, 155, 60, 60), 4, 0)
-        print("pg.draw.rect",win,GREEN,(x,y,square_width,square_width),2,4)
+        # Teken stuk, square_width = de afmeting van het vakje en de positie
+        # De positie is in pixels en moet worden doorgegeven
+        # Je kan images gebruiken uit data/pieces/
+        # Of je laadt zelf images op in data/pieces/
+        pass
 
 class ChessPieceKing(ChessPiece):
     def __init__(self,pos, black_or_white):

@@ -8,7 +8,7 @@ from chess_area_controls import GameAreaControls
 from chess_board import ChessBoard
 
 """
-   Dit is het game object dat alles van het 
+   Dit is het game object dat alles van het spel implementeert
    Het is afgeleid van de basis klasse Game die de algemene spelflow controleert
 """
 
