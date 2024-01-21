@@ -16,6 +16,7 @@ class ChessGame(Game):
     def __init__(self, window, clock):
         Game.__init__(self, window, clock)
         # We definieren de verschillende delen van het scherm, die elk weten hoe ze zich moeten tekenen.
+        # De invulling van die klassen gebeurt in aparte files: chess_area_game.py, ...
         self.chessboard_area = GameAreaChessBoard(self, GAME_RECT)
         self.history_area = GameAreaHistory(self, HIST_RECT)
         self.player_area = GameAreaPlayers(self, PLAYER_RECT)
@@ -35,6 +36,7 @@ class ChessGame(Game):
         self.win.fill(GAME_BG_COLOR)
 
     def draw(self):
+        # Dit object vraagt aan de deelobjecten om zichzelf te tekenen
         self.clear_window()
         self.chessboard_area.draw()
         self.history_area.draw()
@@ -43,6 +45,7 @@ class ChessGame(Game):
 
     """
     Voorbeeld hoe event functies doorgegeven worden naar lager niveau
+    Elk object moet zelf beslissen welke onderliggende objecten deze functies doorkrijgen
     """
     def MOUSEBUTTONDOWN(self, mouse_x, mouse_y):
         self.chessboard_area.MOUSEBUTTONDOWN(mouse_x, mouse_y)
