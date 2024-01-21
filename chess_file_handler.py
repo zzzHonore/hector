@@ -5,7 +5,9 @@ class ChessFileHandler:
         pass
 
     # voorzie alle nodige functies
-    # save_board, load_board, ... (wat je maar wil)
+    # save_board (Board_to_File), load_board(File_to_Board), ... (wat je maar wil)
+    # Functienamen mogen gewijzigd worden indien gewenst
+    # Voorzie in het begin een directory binnen het project (tot we met dialog boxes werken)
     # voorbeeld:
     def Board_to_File(self,fName,chessBoard):
         # fName is de naam van de file die je wil schrijven
