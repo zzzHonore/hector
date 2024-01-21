@@ -7,6 +7,8 @@ class GameAreaChessBoard(GameArea):
         GameArea.__init__(self, game, r)
 
     def draw(self):
-        win = self.game.win
+        # Hier moet het bord met de stukken getekend worden.
+        # We laten het chessboard object dit zelf doen
+        # We geven het window en de rechthoek waarin getekend moet worden mee door
         GameArea.draw(self)
-        self.game.chess_board.draw(win,self.rect)
+        self.game.chess_board.draw(self.game.win, self.rect)

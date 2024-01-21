@@ -11,3 +11,6 @@ class GameAreaPlayers(GameArea):
 
     def draw(self):
         GameArea.draw(self)
+        # Teken hier de Player informatie
+        # Player 1: naam, tijd, ...
+        # Player 2: naam, tijd, ...

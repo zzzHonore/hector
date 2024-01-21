@@ -7,3 +7,5 @@ class GameAreaControls(GameArea):
 
     def draw(self):
         GameArea.draw(self)
+        # Teken hier de controls
+        # Save, Open, Quit, ...
