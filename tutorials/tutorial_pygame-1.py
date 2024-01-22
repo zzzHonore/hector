@@ -10,20 +10,27 @@ PYGAME zorgt voor:
 Tutorial-pygame-deel-1: Openen van een venster
 """
 
-# stap 1: importeer pygame. Je kan nu de functies van pygame gebruiken
+# stap 1: importeer pygame. 
+# Door te importeren as pg, moet je niet telkens pygame voluit schrijven
 import pygame as pg
-
 # stap 2: roep pg.init() op.
 # Doe je dit niet dan zijn er functies van pygame die niet correct werken
 pg.init()
+# Je kan nu de functies van pygame gebruiken
 
-# Eerst openen we een venster met pygame
-# De variabele win zal je moeten meegeven met elke routine die iets op het window moet tekenen
-# we spreken hiervoor de pygame klasse :display: aan
+# Stap 2: We openen een venster (window) met pygame
+# pygame bevat een object :pg.display: dat daar functies voor heeft
+# We roepen de functie :pg.display.set_mode(width,height) op die dat voor je doet
 win = pg.display.set_mode((800, 600))
+# Het resultaat steken we in de variabele :win:
+# De variabele :win: zal je later doorgeven aan alle functies die iets op het window moeten tekenen.
+# We zien later dat :win: eigenlijk een OBJECT is met eigen functies
 
-# We geven het venster een gepaste titel
+# Stap 3: We geven het venster een gepaste titel
+# Ook daarvoor heeft het OBJECT pg.display een functie, namelijk pg.display.set_caption(titel)
 pg.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
+
+# Stap 4: Je mag nu dit programma uitvoeren en het resultaat bekijken
 
 keep_running = True
 while keep_running:
