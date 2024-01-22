@@ -46,6 +46,6 @@ class ChessBoard:
 
         Teken bord: 2 opties,
                 optie 1: een image die juist geplaatst is (eventueel herschalen)
-                          er zit al een image in data/boards/
+                          er zit al een image in assets/boards/
                 optie 2: lijnen zelf tekenen en vierkanten opvullen met pg.draw.rect(win, color, rect
         """

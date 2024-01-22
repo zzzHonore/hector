@@ -18,8 +18,8 @@ class ChessPiece:
     def draw(self,win,square_width,x,y):
         # Teken stuk, square_width = de afmeting van het vakje en de positie
         # De positie is in pixels en moet worden doorgegeven
-        # Je kan images gebruiken uit data/pieces/
-        # Of je laadt zelf images op in data/pieces/
+        # Je kan images gebruiken uit assets/pieces/
+        # Of je laadt zelf images op in assets/pieces/
         pass
 
 class ChessPieceKing(ChessPiece):
