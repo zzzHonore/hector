@@ -1,4 +1,5 @@
 Deze pagina is een gids voor developers die willen bijdragen aan Hector Chess. De verschillende files die samen Hector vormen worden hier uitgelegd.
+
 ## main.py
 Dit is de file die het spel doet opstarten. Deze moet zo eenvoudig mogelijk blijven.
 

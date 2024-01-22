@@ -1,2 +1,0 @@
-class GameInfo(object):
-    pass
