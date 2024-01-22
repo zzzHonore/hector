@@ -33,7 +33,7 @@ CHOCOLATE = (210, 105, 30)
 queen_image = pg.image.load("../assets/pieces/W_Queen.png")
 
 # Eerst kleuren we een vierkantje (alsof het een vakje is van een schaakbord)
-rect1 = pg.Rect((100, 240, 64, 64))  # (left,top,width,height)
+rect1 = pg.Rect((100, 240, 42, 42))  # (left,top,width,height)
 pg.draw.rect(win, CHOCOLATE, rect1, 0)  # Eerst de achtergrond
 # Herinner dat :win: een object is met eigen functies
 # We gebruiken de :win.blit(image,rect) functie om de pixels van het image te copieren naar een recthoek
