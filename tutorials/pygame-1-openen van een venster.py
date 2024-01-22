@@ -2,16 +2,16 @@
 Om te kunnen tekenen op een window hebben we een externe library of package nodig.
 Wij kiezen voor PYGAME (je zal pygame eerst moeten installeren voor je deze tutorial doet)
 PYGAME zorgt voor:
-    Het openen van een window met bepaalde grootte en titel(caption)
-    Tekenen van lijnen en figuren (al dan niet opgevuld)
-    Opladen, herschalen en tekenen van images (bmp,png,jpeg,...)
-    Opvangen van user-events zoals mousedown, mousemove,...
+    -Het openen van een window met bepaalde grootte en titel(caption)
+    -Tekenen van lijnen en figuren (al dan niet opgevuld)
+    -Opladen, herschalen en tekenen van images (bmp,png,jpeg,...)
+    -Opvangen van user-events zoals mousedown, mousemove,...
 
 Tutorial-pygame-deel-1: Openen van een venster
 """
 
 # stap 1: importeer pygame. 
-# Door te importeren as pg, moet je niet telkens pygame voluit schrijven
+# Door te importeren 'as pg', moet je niet telkens pygame voluit schrijven
 import pygame as pg
 # stap 2: roep pg.init() op.
 # Doe je dit niet dan zijn er functies van pygame die niet correct werken
@@ -27,14 +27,14 @@ win = pg.display.set_mode((800, 600))
 # We zien later dat :win: eigenlijk een OBJECT is met eigen functies
 
 # Stap 3: We geven het venster een gepaste titel
-# Ook daarvoor heeft het OBJECT pg.display een functie, namelijk pg.display.set_caption(titel)
+# Ook daarvoor heeft het OBJECT pg.display een functie voor, namelijk pg.display.set_caption(titel)
 pg.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
 
-# Stap 4: Je mag nu dit programma uitvoeren en het resultaat bekijken
 # Opmerking: 
 #    wat wij een window noemen, heet in pygame eigenlijk iets algemener een SURFACE
 #    wanneer een functie een parameter :surface: vraagt, geef je :win: mee
 
+# Volgende code zorgt ervoor dat je game blijft lopen tot je het venster dichtklikt
 keep_running = True
 while keep_running:
     for event in pg.event.get():
@@ -43,3 +43,5 @@ while keep_running:
 
 # Als het game klaar is roep je best pg.quit() op zodat alle geheugen wordt vrijgegeven
 pg.quit()
+
+
