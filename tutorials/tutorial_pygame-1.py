@@ -16,7 +16,7 @@ import pygame as pg
 # stap 2: roep pg.init() op.
 # Doe je dit niet dan zijn er functies van pygame die niet correct werken
 pg.init()
-# Je kan nu de functies van pygame gebruiken
+# Je kan nu alle functies van pygame gebruiken
 
 # Stap 2: We openen een venster (window) met pygame
 # pygame bevat een object :pg.display: dat daar functies voor heeft
@@ -31,6 +31,9 @@ win = pg.display.set_mode((800, 600))
 pg.display.set_caption("Hector Chess - Sint-Pieterscollege, Jette")
 
 # Stap 4: Je mag nu dit programma uitvoeren en het resultaat bekijken
+# Opmerking: 
+#    wat wij een window noemen, heet in pygame eigenlijk iets algemener een SURFACE
+#    wanneer een functie een parameter :surface: vraagt, geef je :win: mee
 
 keep_running = True
 while keep_running:
