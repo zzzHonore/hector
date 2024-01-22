@@ -7,7 +7,7 @@ PYGAME zorgt voor:
     -Opladen, herschalen en tekenen van images (bmp,png,jpeg,...)
     -Opvangen van user-events zoals mousedown, mousemove,...
 
-Tutorial-pygame-deel-3: C
+Tutorial-pygame-deel-3: Clipping
 """
 
 import pygame as pg
@@ -28,29 +28,35 @@ CHOCOLATE = (210, 105, 30)
 # Overzicht van de gebruikte functies (zie Tutorial Deel 2)
 #    pg.draw.rect(surface, color, rect, width=0)
 #    pg.draw.circle(surface, color, center, radius, width=0)
-# Door 1 maal de figuren te tekenen met width=0 krijgen we een opgevulde figuur
-# Door dan 1 maal de figuren te tekenen met width=2 krijgen we een rand
-# Eerst tekenen we een rode rechthoek met groene rand
-rect1 = pg.Rect((40, 280, 200, 75))  # (left,top,width,height)
-pg.draw.rect(win, RED, rect1,0)  # Eerst de rode achtergrond
-pg.draw.rect(win, GREEN, rect1,4)  # Dan de groenekader
-# Dan tekenen we een witte cirkel met straal 45, met blauwe rand
+
+# Als je tekening te groot is en je wil er iets afknippen dan moet je clippen
+# Je kan het vergelijken met croppen van een tekening voor ze tekent
+# je wil bijvoorbeeld een stuk van je tekening gebruiken om een vlag te tekenen
+clip_rect = pg.Rect((420, 320, 140, 64))  # (left,top,width,height)
+
+# set_clip is een functie van je window
+# Het zorgt ervoor dat er enkel nog binnen die rechthoek wordt getekend
+win.set_clip(clip_rect)
+
+# We vullen de clip_rect even op met roze
+pg.draw.rect(win, PINK, clip_rect,0)  # de achtergrond
+
+# Nu tekenen we gewoon onze rechthoek en cirkel uit de vorige tutorials
+rect1 = pg.Rect((340, 280, 200, 75))  # (left,top,width,height)
+pg.draw.rect(win, RED, rect1,0)  # Eerst de achtergrond
+pg.draw.rect(win, GREEN, rect1,4)  # Dan de kader
+# We tekenen een cirkel met straal 45, rond de rechteronderhoek van de rectangle
 pg.draw.circle(win, WHITE, (rect1.right, rect1.bottom), 45, 0)
 pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
+# Nu nog een kader rond de clip_rect
+pg.draw.rect(win, CYAN, clip_rect,2)  # de achtergrond
 
+# Vergeet niet om de clip_rect terug te herstellen anders blijft hij geldig voor volgende functies
+win.set_clip((0, 0, win.get_width(), win.get_height()))
+# Nu kunnen we terug op het volledige window tekenen.
+# We tekenen dus een flag-pole buiten de vorige clip_rect, want het kan weer
+pg.draw.rect(win, BURLYWOOD, (clip_rect.left-10,clip_rect.top-10,10,200),0)  # Eerst de achtergrond
 
-
-
-# Als we pg.Rect gebruiken om een rechthoek te definieren kunnen we ook rect.top, rect.width,... gebruiken
-# De functie pg.Rect zet de python rect (40, 80, 200, 75) om naar een pg.Rect
-rect1 = pg.Rect((40, 80, 200, 75))  # (left,top,width,height)
-pg.draw.rect(win, RED, rect1,4)
-pg.draw.line(win, GREEN, (rect1.left, rect1.top), (rect1.right, rect1.bottom))
-# We tekenen een cirkel met straal 45, rond de rechteronderhoek van de rectangle, met dikte 3
-pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
-
-# Alles wordt getekend op een onzichtbaar venster
-# pg.display.update() kopieert alles naar het zichtbare scherm in 1 stap
 pg.display.update()
 
 keep_running = True
