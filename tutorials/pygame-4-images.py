@@ -26,58 +26,29 @@ CYAN = (0, 255, 255)
 BURLYWOOD = (222, 184, 135)
 CHOCOLATE = (210, 105, 30)
 
-#Nog te verwerken, nu eten!
-
-# We doen nog eens hetzelfde met een andere rect, maar nu zetten we de lijndikte gelijk aan 0
-rect1 = pg.Rect((340, 80, 200, 75))  # (left,top,width,height)
-pg.draw.rect(win, RED, rect1,0)
-pg.draw.line(win, GREEN, (rect1.left, rect1.top), (rect1.right, rect1.bottom))
-# We tekenen een cirkel met straal 45, rond de rechteronderhoek van de rectangle, met dikte 0
-pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 0)
-
-# Wil je gevulde figuren met een rand? Dan combineer je beiden
-rect1 = pg.Rect((40, 280, 200, 75))  # (left,top,width,height)
-pg.draw.rect(win, RED, rect1,0)  # Eerst de achtergrond
-pg.draw.rect(win, GREEN, rect1,4)  # Dan de kader
-# We tekenen een cirkel met straal 45, rond de rechteronderhoek van de rectangle
-pg.draw.circle(win, WHITE, (rect1.right, rect1.bottom), 45, 0)
-pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
-
-# Als je tekening te groot is en je wil er iets afknippen dan moet je clippen
-# je wil bijvoorbeeld een stuk van je tekening gebruiken om een vlag te tekenen
-clip_rect = pg.Rect((420, 320, 140, 64))  # (left,top,width,height)
-# set_clip is een functie van je window
-win.set_clip(clip_rect)
-# We vullen de clip_rect even op met roze
-pg.draw.rect(win, PINK, clip_rect,0)  # de achtergrond
-# Nu tekenen we gewoon
-rect1 = pg.Rect((340, 280, 200, 75))  # (left,top,width,height)
-pg.draw.rect(win, RED, rect1,0)  # Eerst de achtergrond
-pg.draw.rect(win, GREEN, rect1,4)  # Dan de kader
-# We tekenen een cirkel met straal 45, rond de rechteronderhoek van de rectangle
-pg.draw.circle(win, WHITE, (rect1.right, rect1.bottom), 45, 0)
-pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
-# Nu nog een kader rond de clip_rect
-pg.draw.rect(win, CYAN, clip_rect,2)  # de achtergrond
-# Vergeet niet om de clip_rect terug te herstellen
-win.set_clip((0, 0, win.get_width(), win.get_height()))
-# En nog een flag-pole
-pg.draw.rect(win, BURLYWOOD, (clip_rect.left-10,clip_rect.top-10,10,200),0)  # Eerst de achtergrond
-
-# Uitsmijter: het window object van pygame kan ook een :image: tonen, via blit functie
+# Om een image te tekenen moeten we het bestand eerst opladen
+# Hiervoor gebruiken het pygame object :image:
+# Dit object heeft een functie pg.image.load
 queen_image = pg.image.load("assets/pieces/W_Queen.png")
+
+# Eerst kleuren we een vierkantje (alsof het een vakje is van een schaakbord)
 rect1 = pg.Rect((100, 440, 64, 64))  # (left,top,width,height)
-pg.draw.rect(win, CHOCOLATE, rect1,0)  # Eerst de achtergrond
+pg.draw.rect(win, CHOCOLATE, rect1, 0)  # Eerst de achtergrond
+# Herinner dat :win: een object is met eigen functies
+# We gebruiken de :win.blit(image,rect) functie om de pixels van het image te copieren naar een recthoek
 win.blit(queen_image, rect1)
-# is je image te groot kan je hem transformen
+
+# We kunnen dit herhalen met een kleiner vakje, maar dan is de image te groot.
+# pygame heeft een object :pg.transform: dat images kan transformeren.
+# De belangrijkste functie van :pg.transform: is :pg.transform.scale(image,(width, height)):
+# We maken een kleine rechthoek met (width=32,height=32) en tekenen die
 rect1 = pg.Rect((180, 460, 32, 32))  # (left,top,width,height)
-scaled_queen_image = pg.transform.scale(queen_image,(32, 32))
 pg.draw.rect(win, CHOCOLATE, rect1,0)  # Eerst de achtergrond
+# We scalen onze image naar (width=32,height=32)
+scaled_queen_image = pg.transform.scale(queen_image,(32, 32))
+# Nu tekenen we de rechthoek, en blitten we ons nieuw aangemaakte kleinere image naar die rechthoek
 win.blit(scaled_queen_image, rect1)
 
-
-# Alles wordt getekend op een onzichtbaar venster
-# pg.display.update() kopieert alles naar het zichtbare scherm in 1 stap
 pg.display.update()
 
 keep_running = True
