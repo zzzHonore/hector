@@ -7,7 +7,7 @@ PYGAME zorgt voor:
     -Opladen, herschalen en tekenen van images (bmp,png,jpeg,...)
     -Opvangen van user-events zoals mousedown, mousemove,...
 
-Tutorial-pygame-deel-4: 
+Tutorial-pygame-deel-4: werken met images
 """
 
 import pygame as pg
