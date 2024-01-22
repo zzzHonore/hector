@@ -9,7 +9,7 @@ Project: schaakbot.
 * Robin Berger: PYCHARM + GIT-interface OK
 * Chems Dahhane: installatie OK
 * Adam Idan: status onbekend
-* Abdullah Tahir: status onbekend
+* Abdullah Tahir: INSTALLATIE OK
 * Vivianne Michiels: status onbekend
 
 ## Te verdelen taken
