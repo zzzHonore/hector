@@ -65,6 +65,17 @@ pg.draw.line(win, GREEN, (rect1.left, rect1.top), (rect1.right, rect1.bottom),2)
 # We tekenen een blauwe cirkel met straal 45, rond de rechteronderhoek van de rectangle, met dikte 3
 pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
 
+# Variatie: Tekenen van gevulde figuren met rand
+# Door 1 maal de figuren te tekenen met width=0 krijgen we een opgevulde figuur
+# Door dan 1 maal de figuren te tekenen met width>0 krijgen we een rand
+# Eerst tekenen we een rode rechthoek met groene rand
+rect1 = pg.Rect((40, 280, 200, 75))  # (left,top,width,height)
+pg.draw.rect(win, RED, rect1,0)  # Eerst de rode achtergrond
+pg.draw.rect(win, GREEN, rect1,4)  # Dan de groenekader
+# Dan tekenen we een witte cirkel met straal 45, met blauwe rand
+pg.draw.circle(win, WHITE, (rect1.right, rect1.bottom), 45, 0)
+pg.draw.circle(win, BLUE, (rect1.right, rect1.bottom), 45, 3)
+
 # Alles wordt getekend op een onzichtbaar venster
 # pg.display.update() kopieert alles naar het zichtbare scherm in 1 stap
 pg.display.update()
