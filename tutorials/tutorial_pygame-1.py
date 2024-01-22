@@ -1,10 +1,13 @@
 """
 Om te kunnen tekenen op een window hebben we een externe library of package nodig.
+Wij kiezen voor PYGAME (je zal pygame eerst moeten installeren voor je deze tutorial doet)
 PYGAME zorgt voor:
-    Het openen van een window
-    Tekenen van lijnen en figuren
-    Tekenen van images
-    Opvangen van user-events zoals muisedown, mousemove,...
+    Het openen van een window met bepaalde grootte en titel(caption)
+    Tekenen van lijnen en figuren (al dan niet opgevuld)
+    Opladen, herschalen en tekenen van images (bmp,png,jpeg,...)
+    Opvangen van user-events zoals mousedown, mousemove,...
+
+Tutorial-pygame-deel-1: Openen van een venster
 """
 
 # stap 1: importeer pygame. Je kan nu de functies van pygame gebruiken
